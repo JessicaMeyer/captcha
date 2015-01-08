@@ -1,0 +1,29 @@
+
+<!--sign out button somewhere-->
+
+<h1 class="welcomename"> Welcome <%= @user_login %>!</h1>
+
+<!-- Create a new story-->
+
+<div class="test1"></div> <!--these test divs are to center the forms -->
+
+<!-- need to edit this form but it will capture the hashtag, story name and story date-->
+
+<div class="story-form">
+
+ <div class= "row">
+  <div class= "large-6 columns">
+
+      <h6 class="signin-up-text"> sign in: </h6>
+
+    <form action='/signin' method="post" name="signin">
+      <input type='text' id='username' name='username' placeholder='Enter Username' />
+      <input type='password' id='password' name='password' placeholder='Enter Password' />
+       <input type='text' id='username' name='username' placeholder='Enter Username' />
+      <button type='submit' value='Submit' id='signin' class="submitform"> SUBMIT </button>
+    </form>
+  </div>
+ </div>
+</div>
+
+<div class="test2"></div>  <!--these test divs are to center the forms -->
