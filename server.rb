@@ -40,6 +40,14 @@ get "/signup" do
   erb :"index/signup"
 end
 
+get "/welcome" do
+  erb :"welcome"
+end 
+
+get "/story" do
+  erb :"story"
+end
+
 # Signup with username / password params.
 # post "/signup" do
 #   user_data = {:username => params[:username], :password => params[:password]}
