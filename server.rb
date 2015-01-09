@@ -46,8 +46,12 @@ get "/welcome" do
   erb :"welcome"
 end 
 
-get "/story" do
-  @data = JSON.parse RestClient.get "https://api.instagram.com/v1/tags/makersquare/media/recent?access_token=1523996703.abaee01.f6662a65a5304db49d14d1091b0fb65d"
+post "/welcome" do
+  redirect to "/story/" + params['hashtag']
+end
+
+get "/story/:hashtag" do
+  @data = JSON.parse RestClient.get 'https://api.instagram.com/v1/tags/'+ params['hashtag']+ '/media/recent?access_token=1523996703.abaee01.f6662a65a5304db49d14d1091b0fb65d'
   erb :"story"
 end
 
