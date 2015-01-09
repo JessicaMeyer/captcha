@@ -70,6 +70,7 @@ height: 450px;
 
 .founder-color-wrap {
 	background-color: #fbc68e;
+/*	background-image: url("../images/hashtagbackground.jpg");*/
 }
 
 
@@ -94,7 +95,12 @@ height: 450px;
 }
 
 .copyright {
+	padding-top: 60px;
 	color: #4d505b;
 	font-family: 'Hammersmith One', sans-serif;
 }
 
+.footer-wrap {
+	height: 300px;
+	background-color: #00457c;
+}
