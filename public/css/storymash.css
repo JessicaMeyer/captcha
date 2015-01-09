@@ -18,37 +18,34 @@ width: 100%;
 display: table-cell;
 text-align: center;
 vertical-align: middle;
-background-color: #4e505c;
+/*background-color: #4e505c;*/
+background-color: #b6e2f4;
+height: 450px;
 }
 
 .recent-stories {
-	background-color: #16a79d;
-	text-align: center;
-
-}
-
-.founder-stories {
-	background-color: #f4ac42;
+	/*background-color: #16a79d;*/
 	text-align: center;
 
 }
 
 .logo {
-	background-color: #d7d6d5;
+	/*background-color: #b6d7e6;*/
+	background-color: white;
 	height: 100px;
 	display: block;
 }
 
 #signupbutton {
 	float:right;
-	background: #f4ac42;
+	background: #00457c;
 	margin-right: 4px;
 	margin-top: 16px;
 }
 
 #signinbutton {
 	float:right;
-	background: #16a79d;
+	background: #6dc5e9;
 	margin-top: 16px;
 	margin-right: 8px;
 }
@@ -56,11 +53,23 @@ background-color: #4e505c;
 
 .founderpic {
 	height: 225px;
+	border-radius: 5px;
 }
+
 
 .founderstories {
  font-family: 'Oswald', sans-serif;
  font-weight: 400;
+}
+
+.founder-color-wrap {
+	background-color: #fbc68e;
+}
+
+
+.founder-stories {
+	/*background-color: #b6d7e6;*/
+	text-align: center;
 }
 
 .recentstories {
@@ -86,3 +95,4 @@ background-color: #4e505c;
 	color: #4d505b;
 	font-family: 'Hammersmith One', sans-serif;
 }
+
