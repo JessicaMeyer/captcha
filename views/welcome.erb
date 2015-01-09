@@ -75,8 +75,13 @@
   <div class= "large-6 columns">
 
     <h6 class="signin-up-text"> Create a new story: </h6>
+
     <form action='/welcome' method="post">
       <!-- <input type='text' id='username' name='username' placeholder='Enter Username' /> -->
+      <div>
+      <label for="story-title">Name:</label>
+      <input id="story-title" type="text" name="title" placeholder="Enter Your Story's Title">
+      </div>
       <input type='text' id='tag' name='hashtag' placeholder='Enter Hashtag' />
       <button class="btn">Submit</button>
     </form>
