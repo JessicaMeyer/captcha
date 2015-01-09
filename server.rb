@@ -47,13 +47,17 @@ get "/welcome" do
 end 
 
 post "/welcome" do
+  # redirect to "/story/" + params['hashtag'] + "?title=" + params['title'].downcase.gsub(' ', '-')
   redirect to "/story/" + params['hashtag']
 end
 
-get "/story/:hashtag" do
-  @data = JSON.parse RestClient.get 'https://api.instagram.com/v1/tags/'+ params['hashtag']+ '/media/recent?access_token=1523996703.abaee01.f6662a65a5304db49d14d1091b0fb65d'
+get "/story/:x" do
+  puts params  
+  @title = params['title']
+  @data = JSON.parse RestClient.get 'https://api.instagram.com/v1/tags/'+ params['x']+ '/media/recent?access_token=1523996703.abaee01.f6662a65a5304db49d14d1091b0fb65d'
   erb :"story"
 end
+
 
 # Signup with username / password params.
 # post "/signup" do
