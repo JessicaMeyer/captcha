@@ -1,6 +1,8 @@
 require "pg"
 
-require_relative "storymash/users_repo.rb"
+require_relative "storymash/models/user.rb"
+require_relative "storymash/models/session.rb"
+#require_relative "storymash/users_repo.rb"
 
 module Storymash
   def self.create_db_connection(dbname)
