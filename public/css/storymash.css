@@ -1,0 +1,86 @@
+/*.hero-image {
+	width: 100%;
+	height: 400px;
+}*/
+
+/*HOME PAGE */
+
+.hero {
+/*background: url('https://raw.githubusercontent.com/JessicaMeyer/storymash/master/public/images/testimage.JPG') no-repeat center center;*/
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+display: table;
+width: 100%;
+}
+.hero .container {
+display: table-cell;
+text-align: center;
+vertical-align: middle;
+height: 630px;
+background-color: #d7d6d5;
+}
+
+.recent-stories {
+	background-color: #16a79d;
+	text-align: center;
+
+}
+
+.founder-stories {
+	background-color: #f4ac42;
+	text-align: center;
+
+}
+
+.logo {
+	background-color: #d7d6d5;
+	height: 100px;
+	display: block;
+}
+
+#signupbutton {
+	float:right;
+	background: #f4ac42;
+	margin-right: 4px;
+}
+
+#signinbutton {
+	float:right;
+	background: #16a79d;
+}
+
+
+.founderpic {
+	height: 225px;
+}
+
+.founderstories {
+ font-family: 'Oswald', sans-serif; 
+ font-weight: 400;
+}
+
+.recentstories {
+  font-family: 'Oswald', sans-serif; 
+  font-weight: 400;
+}
+
+.foundernames {
+	font-family: 'Hammersmith One', sans-serif;
+	text-align: center;
+	color: #4d505b;
+}
+
+#footerbutton {
+ /*margin-left: 200px;*/
+ float: right;
+ background: #4d505b;
+ font-family: 'Raleway', sans-serif;
+ font-size: 13px;
+}
+
+.copyright {
+	color: #4d505b;
+	font-family: 'Hammersmith One', sans-serif;
+}
