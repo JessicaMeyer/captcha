@@ -1,3 +1,5 @@
+require 'active_record'
+
 class User < ActiveRecord::Base
   validates :username, :presence => {:message => "Username can't be blank."}
   validates :username, :uniqueness => {:message => "Username already exists."}
