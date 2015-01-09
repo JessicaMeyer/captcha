@@ -6,7 +6,67 @@
 <!-- Create a new story-->
 
 <div class="test1"></div> <!--these test divs are to center the forms -->
+<!-- 
 
+<form action="/users" method="post">
+  <div>
+    <label for="name-input">Name:</label>
+    <input id="name-input" type="text" name="full-name" value="John Doe">
+  </div>
+  <div>
+    <label for="email-input">Email:</label>
+    <input id="email-input" type="email" name="email">
+  </div>
+  <div>
+    <label for="password-input">Password:</label>
+    <input id="password-input" type="password" name="password">
+  </div>
+  <div>
+    <label for="password-conf-input">Password Confirmation:</label>
+    <input id="password-conf-input" type="password" name="password-conf">
+  </div>
+  <div>
+    <label for="date-input">Select your birthday:</label>
+    <input id="date-input" type="date" name="birthday">
+  </div>
+  <div>
+    <input id="email-updates" type="checkbox" name="email-updates" value="true">
+    <label for="email-updates">Do you want to receive email updates?</label>
+  </div>
+  <p>Which city did you attend classes in?</p>
+  <div>
+    <input id="atx-location-input" type="radio" name="location" value="atx">
+    <label for="atx-location-input">Austin</label>
+  </div>
+  <div>
+    <input id="sf-location-input" type="radio" name="location" value="sf">
+    <label for="sf-location-input">San Francisco</label>
+  </div>
+  <div>
+    <label for="cohort-selector">Select your cohort:</label>
+    <select id="cohort-selector" name="cohort">
+      <option value="atxc1">ATX Cohort 1</option>
+      <option value="atxc2">ATX Cohort 2</option>
+      <option value="atxc3">ATX Cohort 3</option>
+      <option value="atxc4">ATX Cohort 4</option>
+      <option value="atxc5">ATX Cohort 5</option>
+      <option value="atxc6">ATX Cohort 6</option>
+      <option value="atxc7">ATX Cohort 7</option>
+      <option value="atxc8">ATX Cohort 8</option>
+      <option value="sfc1">SF Cohort 1</option>
+      <option value="sfc2">SF Cohort 2</option>
+    </select>
+  </div>
+  <div>
+    <textarea name="biography" rows="50" cols="50">Say a little about yourself here!</textarea>
+  </div>
+  <div>
+    <input type="hidden" name="language-preference" value="english">
+  </div>
+  <div>
+    <input type="submit">
+  </div>
+</form> -->
 <!-- need to edit this form but it will capture the hashtag, story name and story date-->
 
 <div class="story-form">
@@ -14,13 +74,11 @@
  <div class= "row">
   <div class= "large-6 columns">
 
-      <h6 class="signin-up-text"> sign in: </h6>
-
-    <form action='/signin' method="post" name="signin">
-      <input type='text' id='username' name='username' placeholder='Enter Username' />
-      <input type='password' id='password' name='password' placeholder='Enter Password' />
-       <input type='text' id='username' name='username' placeholder='Enter Username' />
-      <button type='submit' value='Submit' id='signin' class="submitform"> SUBMIT </button>
+    <h6 class="signin-up-text"> Create a new story: </h6>
+    <form action='/welcome' method="post">
+      <!-- <input type='text' id='username' name='username' placeholder='Enter Username' /> -->
+      <input type='text' id='tag' name='hashtag' placeholder='Enter Hashtag' />
+      <button class="btn">Submit</button>
     </form>
   </div>
  </div>
