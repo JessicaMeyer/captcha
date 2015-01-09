@@ -76,13 +76,17 @@
 
     <h6 class="signin-up-text"> Create a new story: </h6>
 
-    <form action='/welcome' method="post">
+    <form action='/welcome' method="post" id="my_form">
       <!-- <input type='text' id='username' name='username' placeholder='Enter Username' /> -->
       <div>
-      <label for="story-title">Name:</label>
+      <label for="story-title">Title:</label>
       <input id="story-title" type="text" name="title" placeholder="Enter Your Story's Title">
       </div>
       <input type='text' id='tag' name='hashtag' placeholder='Enter Hashtag' />
+      <label for="date-of-arrival">Timeline: </label>
+      <input type="date" name="date-of-arrival" id="doa" autofocus required>
+      <label for="date-of-departure">Date of Departure: </label>
+      <input type="date" name="date-of-departure" id="dod" autofocus required>
       <button class="btn">Submit</button>
     </form>
   </div>
@@ -90,3 +94,20 @@
 </div>
 
 <div class="test2"></div>  <!--these test divs are to center the forms -->
+
+<script>
+// mcc @copyright //
+      $(document).ready(function() {
+        $(document).foundation();
+        $(document).on("submit", "#my_form", function (e) {
+          var startDate = new Date($('#doa').val());
+          var endDate = new Date($('#dod').val());
+           //if end date is before start date
+          if (startDate > endDate){
+              alert("Please enter a later date than the start!");
+              return false;
+            }
+          //if the above conditions fail, the form will be not submitted
+      });
+    })
+    </script>
