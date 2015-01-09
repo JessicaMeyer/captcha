@@ -11,7 +11,8 @@ gem 'sinatra-contrib', '~> 1.4.2'
 gem 'rack-flash3'
 gem 'activerecord', '~> 4.1.0'
 gem 'active_record_tasks', '~> 1.1.0'
-
+gem "json", "~> 1.8"
+gem "multi_json", "~> 1.10.1"
 # added for rspec portion group block 
 
 group :test do

@@ -1,6 +1,8 @@
 require "sinatra"
 require "sinatra/reloader"
 require "pg"
+require 'rest_client'
+require "json"
 require "pry-byebug"
 # require "rack-flash3" # commented out for now 
 #require "rest-client"
@@ -45,6 +47,7 @@ get "/welcome" do
 end 
 
 get "/story" do
+  @data = JSON.parse RestClient.get "https://api.instagram.com/v1/tags/makersquare/media/recent?access_token=1523996703.abaee01.f6662a65a5304db49d14d1091b0fb65d"
   erb :"story"
 end
 
