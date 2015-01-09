@@ -44,11 +44,14 @@ background-color: #d7d6d5;
 	float:right;
 	background: #f4ac42;
 	margin-right: 4px;
+	margin-top: 16px;
 }
 
 #signinbutton {
 	float:right;
 	background: #16a79d;
+	margin-top: 16px;
+	margin-right: 8px;
 }
 
 
@@ -57,12 +60,12 @@ background-color: #d7d6d5;
 }
 
 .founderstories {
- font-family: 'Oswald', sans-serif; 
+ font-family: 'Oswald', sans-serif;
  font-weight: 400;
 }
 
 .recentstories {
-  font-family: 'Oswald', sans-serif; 
+  font-family: 'Oswald', sans-serif;
   font-weight: 400;
 }
 
