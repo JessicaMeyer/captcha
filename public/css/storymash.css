@@ -23,11 +23,6 @@ background-color: #b6e2f4;
 height: 450px;
 }
 
-.recent-stories {
-	/*background-color: #16a79d;*/
-	text-align: center;
-
-}
 
 .logo {
 	/*background-color: #b6d7e6;*/
@@ -48,6 +43,17 @@ height: 450px;
 	background: #6dc5e9;
 	margin-top: 16px;
 	margin-right: 8px;
+}
+
+.recent-memories {
+	/*background-color: #16a79d;*/
+	text-align: center;
+
+}
+
+.recentmemories {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
 }
 
 
@@ -72,10 +78,6 @@ height: 450px;
 	text-align: center;
 }
 
-.recentstories {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 400;
-}
 
 .foundernames {
 	font-family: 'Hammersmith One', sans-serif;
