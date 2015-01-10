@@ -101,7 +101,7 @@ end
 get "/story/:x" do
   puts params  
   @title = params['title']
-  @data = JSON.parse RestClient.get 'https://api.instagram.com/v1/tags/'+ params['x']+ '/media/recent?access_token=1523996703.abaee01.f6662a65a5304db49d14d1091b0fb65d'
+  @data = JSON.parse RestClient.get 'https://api.instagram.com/v1/tags/'+ params['x']+ '/media/recent?access_token=1523996703.e61ce71.055273204cd2431c843615792dc40304&max_tag_id=137867725&min_tag_id=137599885'
   erb :"story"
 end
 
