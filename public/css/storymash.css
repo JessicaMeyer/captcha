@@ -23,11 +23,6 @@ background-color: #b6e2f4;
 height: 450px;
 }
 
-.recent-stories {
-	/*background-color: #16a79d;*/
-	text-align: center;
-
-}
 
 .logo {
 	/*background-color: #b6d7e6;*/
@@ -50,6 +45,17 @@ height: 450px;
 	margin-right: 8px;
 }
 
+.recent-memories {
+	/*background-color: #16a79d;*/
+	text-align: center;
+
+}
+
+.recentmemories {
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+}
+
 
 .founderpic {
 	height: 225px;
@@ -64,6 +70,7 @@ height: 450px;
 
 .founder-color-wrap {
 	background-color: #fbc68e;
+/*	background-image: url("../images/hashtagbackground.jpg");*/
 }
 
 
@@ -72,10 +79,6 @@ height: 450px;
 	text-align: center;
 }
 
-.recentstories {
-  font-family: 'Oswald', sans-serif;
-  font-weight: 400;
-}
 
 .foundernames {
 	font-family: 'Hammersmith One', sans-serif;
@@ -92,7 +95,12 @@ height: 450px;
 }
 
 .copyright {
+	padding-top: 60px;
 	color: #4d505b;
 	font-family: 'Hammersmith One', sans-serif;
 }
 
+.footer-wrap {
+	height: 300px;
+	background-color: #00457c;
+}
