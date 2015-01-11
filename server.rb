@@ -4,8 +4,8 @@ require "pg"
 require 'rest_client'
 require "json"
 require "pry-byebug"
+require "date"
 #require "rack-flash3" # commented out for now 
-#require "rest-client"
 #require "bcrypt"
 
 
@@ -71,15 +71,19 @@ post "/signin" do
   password = params[:password]
 
   user = User.where(username: username, password: password)
+  
   #puts user
   #puts user[0]["id"]
 
-  if user[0]["id"]
-    session["user_id"] = user[0]["id"] 
-    redirect to "/welcome"
-  else
-    "login error"
-  end
+  redirect to "/welcome/"+ params[:username]
+  # if user[0]["id"]
+  #   session["user_id"] = user[0]["id"] 
+  #   redirect to "/welcome"
+  # else
+  #   "login error"
+  # end
+
+
 end
 
 ####################
@@ -87,19 +91,32 @@ end
 ####################
 
 
-get "/welcome" do
+get "/welcome/:username" do
   erb :"welcome"
 end 
 
 post "/welcome" do
   # redirect to "/story/" + params['hashtag'] + "?title=" + params['title'].downcase.gsub(' ', '-')
-  redirect to "/story/" + params['hashtag']
+  redirect to "/story/" + params['hashtag'] +"?start-date="+ params["date-of-start"] + "&end-date="+ params["date-of-end"] 
 end
 
 get "/story/:x" do
+  starttime = params["start-date"].split("-")
+  y = starttime[0].to_i
+  m = starttime[1].to_i
+  d = starttime[2].to_i
+  @startdate = Date.new(y,m,d).to_time.to_i
+  endtime = params["end-date"].split("-")
+  ey = endtime[0].to_i
+  em = endtime[1].to_i
+  ed = endtime[2].to_i
+  @enddate = Date.new(ey,em,ed).to_time.to_i
   puts params  
   @title = params['title']
-  @data = JSON.parse RestClient.get 'https://api.instagram.com/v1/tags/'+ params['x']+ '/media/recent?access_token=1523996703.e61ce71.055273204cd2431c843615792dc40304&max_tag_id=137867725&min_tag_id=137599885'
+
+  @data = JSON.parse RestClient.get 'https://api.instagram.com/v1/tags/'+ params['x']+ '/media/recent?access_token=1523996703.e61ce71.055273204cd2431c843615792dc40304&max_tag_id=#{@startdate}&min_tag_id=#{@enddate}'
+  # @data = JSON.parse RestClient.get 'https://api.instagram.com/v1/tags/'+ params['x']+ '/media/recent?access_token=1523996703.e61ce71.055273204cd2431c843615792dc40304'
+
   erb :"story"
 end
 
