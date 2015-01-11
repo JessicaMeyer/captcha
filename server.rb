@@ -4,13 +4,10 @@ require "pg"
 require 'rest_client'
 require "json"
 require "pry-byebug"
-# require "rack-flash3" # commented out for now 
+#require "rack-flash3" # commented out for now 
 #require "rest-client"
 #require "bcrypt"
 
-
-# Point to Storymash 'Engine' (not needed since we are using Active Record)
-# require_relative "lib/storymash.rb"
 
 # Active Record 
 require_relative "config/environments.rb"
@@ -22,20 +19,12 @@ configure do
   set :bind, "0.0.0.0"
 end
 
-# Set up help to connect to database. Not needed with Active Record
-#helpers do
-#  def db
-#    db = Storymash.create_db_connection('storymash')
-#  end
-#end
 
 # May be needed at a later date
 before do
   if session["user_id"]
-#     Update this to reflect AR usage
       @user_id = session["user_id"]
       @current_user = User.find(@user_id)
-      #@current_user = User.find_by(session[:user_id])
   end
 end
 
@@ -43,24 +32,6 @@ end
 get "/" do
   erb :index
 end
-
-# Signinup page
-# get "/signinup" do
-#   erb :signinup
-# end
-
-# post "/signup" do
-
-#   username = params[:username]
-#   password = params[:password]
-
-#   #@user = User.create(username: username, password: password)
-#   User.create(username: username, password: password)
-
-#   #session["user_id"] = @user[id] 
-
-#   redirect to "/welcome"
-# end
 
 
 ####################
@@ -80,13 +51,12 @@ post "/signup" do
   username = params[:username]
   password = params[:password]
 
-  @user = User.create(username: username, password: password)
+  user = User.create(username: username, password: password)
   
-  session["user_id"] = @user["id"] 
+  session["user_id"] = user["id"] 
 
   redirect to "/welcome"
 end
-
 
 get "/signin" do
   erb :signin
@@ -95,10 +65,17 @@ end
 # Sigin with username / password params. Create sessions
 post "/signin" do
   #user_data = {:username => params[:username], :password => params[:password]}
-  @user_login = User.find_by(@user_id)
+  #puts params
 
-  if @user_login["id"]
-    session["user_id"] = @user_login["id"]
+  username = params[:username]
+  password = params[:password]
+
+  user = User.where(username: username, password: password)
+  #puts user
+  #puts user[0]["id"]
+
+  if user[0]["id"]
+    session["user_id"] = user[0]["id"] 
     redirect to "/welcome"
   else
     "login error"
