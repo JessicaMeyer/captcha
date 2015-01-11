@@ -7,7 +7,7 @@
         <time class="cbp_tmtime" datetime=""><span><%= Time.at(x["caption"]["created_time"].to_i).strftime("%B %d, %Y") %></span></time>
         <div class="cbp_tmicon cbp_tmicon-phone"></div>
         <div class="cbp_tmlabel">
-        <h2> <%= x["caption"]["text"].gsub(/[\u{1F600}-\u{1F6FF}]/, "") %></h2>    
+        <h2> <%= x["caption"]["text"].gsub(/[\u{1F000}-\u{1F6FF}]|[\u{26000}-\u{27FFF}]/, "") %></h2>    
         <img src="<%= x["images"]["low_resolution"]["url"] %>" alt="">
     </div>
     </li>
