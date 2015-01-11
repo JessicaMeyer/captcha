@@ -1,7 +1,7 @@
 
 <!--sign out button somewhere-->
 
-<h1 class="welcomename"> Welcome <%= @current_user["username"] %>!</h1>
+<h1 class="welcomename"> Welcome <%= params["username"] %>!</h1>
 
 <!-- Create a new story-->
 
@@ -83,10 +83,10 @@
       <input id="story-title" type="text" name="title" placeholder="Enter Your Story's Title">
       </div>
       <input type='text' id='tag' name='hashtag' placeholder='Enter Hashtag' />
-      <label for="date-of-arrival">Timeline: </label>
-      <input type="date" name="date-of-arrival" id="doa" autofocus required>
-      <label for="date-of-departure">Date of Departure: </label>
-      <input type="date" name="date-of-departure" id="dod" autofocus required>
+      <label for="date-of-start">Timeline: start </label>
+      <input type="date" name="date-of-start" id="doa" autofocus required>
+      <label for="date-of-end">Timeline: end</label>
+      <input type="date" name="date-of-end" id="dod" autofocus required>
       <button class="btn">Submit</button>
     </form>
   </div>
