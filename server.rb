@@ -105,7 +105,7 @@ get "/story/:x" do
   y = starttime[0].to_i
   m = starttime[1].to_i
   d = starttime[2].to_i
-  @startdate = Date.new(y,m,d).to_time.to_i
+  @startdate = Date.new(y,m,d).to_time.to_i 
   endtime = params["end-date"].split("-")
   ey = endtime[0].to_i
   em = endtime[1].to_i
@@ -114,7 +114,7 @@ get "/story/:x" do
   puts params  
   @title = params['title']
 
-  @data = JSON.parse RestClient.get 'https://api.instagram.com/v1/tags/'+ params['x']+ '/media/recent?access_token=1523996703.e61ce71.055273204cd2431c843615792dc40304&max_tag_id=#{@startdate}&min_tag_id=#{@enddate}'
+  @data = JSON.parse RestClient.get 'https://api.instagram.com/v1/tags/'+ params['x']+ '/media/recent?access_token=1523996703.e61ce71.055273204cd2431c843615792dc40304&max_tag_id=@enddate&min_tag_id=@startdate'
   # @data = JSON.parse RestClient.get 'https://api.instagram.com/v1/tags/'+ params['x']+ '/media/recent?access_token=1523996703.e61ce71.055273204cd2431c843615792dc40304'
 
   erb :"story"
