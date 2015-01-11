@@ -75,7 +75,7 @@ post "/signin" do
   #puts user
   #puts user[0]["id"]
 
-  redirect to "/welcome/"+ params[:username]
+  redirect to "/welcome"
   # if user[0]["id"]
   #   session["user_id"] = user[0]["id"]
   #   redirect to "/welcome"
