@@ -1,17 +1,21 @@
-<div id="title"><%= @title%></div>
+<body>
+
+<%= @title%>
+<br><br>
+
 
 <center>
-<ul class="cbp_tmtimeline">
-    <% @data["data"].each do |x|%>
-    <li>
-        <time class="cbp_tmtime" datetime=""><span><%= Time.at(x["caption"]["created_time"].to_i).strftime("%B %d, %Y") %></span></time>
-        <div class="cbp_tmicon cbp_tmicon-phone"></div>
-        <div class="cbp_tmlabel">
-        <h2 class="sm-title"> <%= x["caption"]["text"] %></h2>    
-        <img src="<%= x["images"]["low_resolution"]["url"] %>" alt="">
+    <div id="hashmash">
+
+        <% @data["data"].take(9).each do |x|%>
+
+            &nbsp;&nbsp;&nbsp;<img src="<%= x["images"]["low_resolution"]["url"] %>" alt="" class="hashystyle">&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <% end %>
     </div>
-    </li>
-    <% end %> 
-</ul>
+<br>
+<br>
 </center>
 
+</body>
+</html>

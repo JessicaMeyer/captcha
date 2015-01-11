@@ -23,7 +23,7 @@ display: table-cell;
 text-align: center;
 vertical-align: middle;
 /*background-color: #4e505c;*/
-background-color: #040304;
+background-color: #b6e2f4;
 /*height: 450px;*/
 }
 
@@ -176,4 +176,16 @@ background-color: #040304;
 
 .container {
 	background-color: #CFD8DC;
+}
+
+#hashmash {
+  width: 1000px;
+  background-color: black;
+  border-radius: 3px;
+}
+
+.hashystyle {
+  border-radius: 4px;
+  margin-bottom: 50px;
+  height: 295px;
 }

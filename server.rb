@@ -5,11 +5,11 @@ require 'rest_client'
 require "json"
 require "pry-byebug"
 require "date"
-#require "rack-flash3" # commented out for now 
+#require "rack-flash3" # commented out for now
 #require "bcrypt"
 
 
-# Active Record 
+# Active Record
 require_relative "config/environments.rb"
 
 
@@ -46,14 +46,14 @@ end
 post "/signup" do
   #user_data = {:username => params[:username], :password => params[:password]}
   #@user_save = Storymash::UsersRepo.save(db, params)
-  #session["user_id:"] = @user_save["id"] 
-  
+  #session["user_id:"] = @user_save["id"]
+
   username = params[:username]
   password = params[:password]
 
   user = User.create(username: username, password: password)
-  
-  session["user_id"] = user["id"] 
+
+  session["user_id"] = user["id"]
 
   redirect to "/welcome"
 end
@@ -71,13 +71,13 @@ post "/signin" do
   password = params[:password]
 
   user = User.where(username: username, password: password)
-  
+
   #puts user
   #puts user[0]["id"]
 
   redirect to "/welcome/"+ params[:username]
   # if user[0]["id"]
-  #   session["user_id"] = user[0]["id"] 
+  #   session["user_id"] = user[0]["id"]
   #   redirect to "/welcome"
   # else
   #   "login error"
@@ -87,27 +87,27 @@ post "/signin" do
 end
 
 ####################
-# END OPTION: SPLIT SIGNUP/IN 
+# END OPTION: SPLIT SIGNUP/IN
 ####################
 
-get "/welcome" do 
+get "/welcome" do
   erb :welcome
 end
 
 # get "/welcome/:username" do
 #   erb :"welcome"
-# end 
+# end
 
-post "/welcome" do 
+post "/welcome" do
   redirect to "/story/" + params['hashtag']
 end
 
 # post "/welcome" do
 #   # redirect to "/story/" + params['hashtag'] + "?title=" + params['title'].downcase.gsub(' ', '-')
-#   redirect to "/story/" + params['hashtag'] +"?start-date="+ params["date-of-start"] + "&end-date="+ params["date-of-end"] 
+#   redirect to "/story/" + params['hashtag'] +"?start-date="+ params["date-of-start"] + "&end-date="+ params["date-of-end"]
 # end
 
-get "/story/:x" do 
+get "/story/:x" do
   puts params
   @data = JSON.parse RestClient.get 'https://api.instagram.com/v1/tags/'+ params['x']+ '/media/recent?access_token=1523996703.e61ce71.055273204cd2431c843615792dc40304'
   erb :story
@@ -118,13 +118,13 @@ end
 #   y = starttime[0].to_i
 #   m = starttime[1].to_i
 #   d = starttime[2].to_i
-#   @startdate = Date.new(y,m,d).to_time.to_i 
+#   @startdate = Date.new(y,m,d).to_time.to_i
 #   endtime = params["end-date"].split("-")
 #   ey = endtime[0].to_i
 #   em = endtime[1].to_i
 #   ed = endtime[2].to_i
 #   @enddate = Date.new(ey,em,ed).to_time.to_i
-#   puts params  
+#   puts params
 #   @title = params['title']
 
 #   @data = JSON.parse RestClient.get 'https://api.instagram.com/v1/tags/'+ params['x']+ '/media/recent?access_token=1523996703.e61ce71.055273204cd2431c843615792dc40304&max_tag_id=@enddate&min_tag_id=@startdate&count=6'
