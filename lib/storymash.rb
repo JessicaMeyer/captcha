@@ -2,6 +2,8 @@ require "pg"
 
 require_relative "storymash/models/user.rb"
 require_relative "storymash/models/session.rb"
+require_relative "storymash/models/search.rb"
+require_relative "storymash/models/title.rb"
 #require_relative "storymash/users_repo.rb"
 
 module Storymash
