@@ -142,3 +142,38 @@ background-color: #040304;
 	font-size: 18px;
 	font-family: 'Hammersmith One', sans-serif;
 }
+
+/* welcome.erb page */
+
+.welcomename {
+	text-align: center;
+	font-family: "Marck Script", cursive;
+}
+
+.story-form {
+	border: 1px solid #9e9e9e;
+	border-radius: 15px;
+	width: 35%;
+    display: inline-block;
+}
+
+.hashpic {
+	border: 1px solid #9e9e9e;
+	border-radius: 15px;
+    width: 35%;
+  display: inline-block;
+}
+
+.test1 {
+  width: 15%;
+  display: inline-block;
+}
+
+.test2 {
+	width: 15%;
+	display: inline-block;
+}
+
+.container {
+	background-color: #CFD8DC;
+}
