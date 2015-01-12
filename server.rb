@@ -131,11 +131,14 @@ end
 
 
 
-# # Sign out user - if user id exists, then remove id from session
-# post "/signout" do
-#   unless params[:id].nil?
-#     session.delete[params:id]
-#   end
-#   redirect to "/"
-# end
+# Sign out user - if user id exists, then remove id from session
+post "/signout" do
+
+  #session["user_id"] = ''
+  
+  # unless params[:id].nil?
+  #   session.delete[params:id]
+  # end
+  redirect to "/"
+end
 
