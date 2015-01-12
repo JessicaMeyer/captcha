@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../css/storymash.css">
     <link rel="stylesheet" href="../css/timeline.css">
     <link rel="stylesheet" href="../css/component.css">
+    <link rel="stylesheet" href="../css/component2.css">
+    <link rel="stylesheet" href="../css/default.css">
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700|Signika' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Hammersmith+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
@@ -58,6 +60,30 @@
 <script>
     new CBPGridGallery( document.getElementById( 'grid-gallery' ) );
 </script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="js/jquery.cbpContentSlider.min.js"></script>
+    <script>
+      $(function() {
+        /*
+        - how to call the plugin:
+        $( selector ).cbpContentSlider( [options] );
+        - options:
+        {
+          // default transition speed (ms)
+          speed : 500,
+          // default transition easing
+          easing : 'ease-in-out',
+          // current item's index
+          current : 0
+        }
+        - destroy:
+        $( selector ).cbpContentSlider( 'destroy' );
+        */
+
+        $( '#cbp-contentslider' ).cbpContentSlider();
+      });
+    </script>
 
 </body>
 </html>
