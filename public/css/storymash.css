@@ -59,8 +59,9 @@ background-color: #b6e2f4;
 }
 
 .recentmemories {
-  font-family: 'Oswald', sans-serif;
+   font-family: "Marck Script", cursive;
   font-weight: 400;
+  padding-top: 20px;
 }
 
 /* founder pic section home page */
@@ -76,6 +77,8 @@ background-color: #b6e2f4;
  font-family: "Marck Script", cursive;
  font-weight: 400;
  color: #b6d7e6;
+ 	padding-top: 20px;
+ 	padding-bottom: 20px;
 }
 
 .founder-info {
@@ -112,7 +115,9 @@ background-color: #b6e2f4;
  background: #4d505b;
  font-family: 'Raleway', sans-serif;
  font-size: 14px;
+ margin-top: 20px;
 }
+
 
 .twitbutton {
 	padding-top: 35px;
