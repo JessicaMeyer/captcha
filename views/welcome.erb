@@ -1,9 +1,19 @@
 <div class="logo">
       <img src="images/captcha.jpg"></img>
        <!--sign out button somewhere-->
-       <a href="/signout" method="post" name="signout" action="/signout" class="button radius" id="signoutbutton"> SIGN OUT </a>
+
 
         <!-- <form action='/signout' method="post" name="signout" class="button radius" id="signoutbutton" action="/signout"></form> -->
+
+       
+       <!-- <a href="/signout" method="post" name="signout" action="/signout" class="button radius" id="signoutbutton"> SIGN OUT </a> -->
+
+    <form style="border: 1px solid black; margin-top: -70px; padding-left:300px" action='/signout' method="post" name="signout"><button style="border-radius: 4px">SIGNOUT</button></form>
+
+</div>
+
+        <!-- <form><button method="post" name="/signout"> SIGN OUT </button></form> -->
+
 </div>
 
 <div class="container">
@@ -13,16 +23,19 @@
 
   <div class="container">
       <header class="clearfix">
-      </header> 
+      </header>
       <div class="main">
         <div id="cbp-contentslider" class="cbp-contentslider">
           <ul>
             <li id="slide1">
-              <center><h3> # how it works </h3></center>
+              <center><h3># how it works</h3></center>
               <div>
                 <div class="cbp-content">
-                  <p>Veggies sunt bona vobis, proinde vos postulo esse magis desert raisin bush tomato soko salsify garbanzo horseradish cabbage burdock.</p>
-                  <p>Daikon artichoke gumbo azuki bean bok choy avocado winter purslane gram earthnut pea broccoli salsify squash plantain wattle seed wakame broccoli rabe bamboo shoot. Zucchini lotus root azuki bean epazote dulse pumpkin rutabaga spinach. Endive mung bean gumbo maize plantain rock melon.</p>
+                  <br><br><br>
+                  <p style="font-size: 25px"><strong>Step 1:</strong><br>Hashtag your event</p><br>
+                  <p style="font-size: 25px"><strong>Step 2:</strong><br>Login to CAPTCHA</p><br><br><br>
+                  <p style="font-size: 25px"><strong>Step 3:</strong><br>Enter in your event's Hashtag</p><br>
+                  <p style="font-size: 25px"><strong>Step 4:</strong><br>Share your CAPTCHA with the world</p>
                 </div>
               </div>
             </li>
@@ -45,14 +58,14 @@
                 <div class="cbp-content">
                    <form action='/welcome' method="post" id="my_form">
       <!-- <input type='text' id='username' name='username' placeholder='Enter Username' /> -->
-      
+
       <label for="event-title">event title:</label>
       <input id="story-title" type="text" name="title" placeholder="your event title">
       <label for="event-hashtag">event hashtag:</label>
       <input type="text" id="tag" name="hashtag" placeholder="your event hashtag" />
       <button class="btn">Submit</button>
     </form>
-              
+
               </div>
             </div>
             </li>
