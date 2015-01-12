@@ -34,10 +34,7 @@ get "/" do
 end
 
 
-####################
-# OPTION:  SPLIT SIGNUP/IN
-####################
-
+# Signup
 get "/signup" do
   erb :signup
 end
@@ -58,38 +55,35 @@ post "/signup" do
   redirect to "/welcome"
 end
 
+
+# Signin
 get "/signin" do
   erb :signin
 end
 
 # Sigin with username / password params. Create sessions
 post "/signin" do
-  #user_data = {:username => params[:username], :password => params[:password]}
-  #puts params
 
   username = params[:username]
   password = params[:password]
 
   user = User.where(username: username, password: password)
 
-  #puts user
   #puts user[0]["id"]
 
-  redirect to "/welcome"
-  # if user[0]["id"]
-  #   session["user_id"] = user[0]["id"]
-  #   redirect to "/welcome"
-  # else
-  #   "login error"
-  # end
-
+  if user[0]["id"]
+    session["user_id"] = user[0]["id"]
+    redirect to "/welcome"
+  #else
+   # "login error"
+  end
+  
+  #redirect to "/welcome"
 
 end
 
-####################
-# END OPTION: SPLIT SIGNUP/IN
-####################
 
+# Welcome page 
 get "/welcome" do
   erb :welcome
 end
@@ -97,6 +91,7 @@ end
 # get "/welcome/:username" do
 #   erb :"welcome"
 # end
+
 
 post "/welcome" do
   redirect to "/story/" + params['hashtag']
@@ -107,6 +102,7 @@ end
 #   redirect to "/story/" + params['hashtag'] +"?start-date="+ params["date-of-start"] + "&end-date="+ params["date-of-end"]
 # end
 
+# Capture page
 get "/story/:x" do
   puts params
   @data = JSON.parse RestClient.get 'https://api.instagram.com/v1/tags/'+ params['x']+ '/media/recent?access_token=1523996703.e61ce71.055273204cd2431c843615792dc40304'
@@ -142,5 +138,4 @@ end
 #   end
 #   redirect to "/"
 # end
-
 
