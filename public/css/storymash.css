@@ -230,3 +230,16 @@ background-color: #b6e2f4;
 	font-size: 18px;
 	font-family: 'Hammersmith One', sans-serif;
 }
+
+button#shorten {
+ background-color: #f78d1d;
+}
+
+input#url-input {
+	width: 40%;
+}
+
+.shortenurl {
+	margin-left: 473px;
+ /*   border: 1px solid red;*/
+}
