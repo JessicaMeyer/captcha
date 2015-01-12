@@ -152,11 +152,12 @@ html, body, .container, .main { height: 900px;}
 	margin: 0 0 0.3em;
 	position: relative;
 	color: #47a3da;
-	text-transform: uppercase;
+/*	text-transform: uppercase;*/
 	text-align: right;
-	letter-spacing: 0.3em;
-	padding: 0 1.5em 0 0;
+/*	letter-spacing: 0.3em;*/
+	padding: 0 4.3em 0 0;
 	border-bottom: 4px solid #47a3da;
+	font-family: "HelveticaNeue-Bold";
 }
 
 .cbp-contentslider h3[class^="icon-"]:before,
