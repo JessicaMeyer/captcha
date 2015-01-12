@@ -1,7 +1,7 @@
 <div class="logo">
       <img src="images/captcha.jpg"></img>
        <!--sign out button somewhere-->
-       
+
        <!-- <a href="/signout" method="post" name="signout" action="/signout" class="button radius" id="signoutbutton"> SIGN OUT </a> -->
 
     <form style="border: 1px solid black; margin-top: -70px; padding-left:300px" action='/signout' method="post" name="signout"><button style="border-radius: 4px">SIGNOUT</button></form>
@@ -50,18 +50,18 @@
             <li id="slide3">
               <h3># get started&nbsp;&nbsp;</h3>
               <div>
-                <div class="cbp-content">
-                   <form action='/welcome' method="post" id="my_form">
+              <!--  <div class="cbp-content"> -->
+                 <center>  <form action='/welcome' method="post" id="my_form" class="thehashform" style="padding-top: 70px">
       <!-- <input type='text' id='username' name='username' placeholder='Enter Username' /> -->
 
-      <label for="event-title">event title:</label>
-      <input id="story-title" type="text" name="title" placeholder="your event title">
-      <label for="event-hashtag">event hashtag:</label>
-      <input type="text" id="tag" name="hashtag" placeholder="your event hashtag" />
-      <button class="btn">Submit</button>
-    </form>
+      <label for="event-title" style="font-family: HelveticaNeue-Bold">EVENT TITLE:</label>
+      <input id="story-title" type="text" name="title" placeholder="your event title" style="display: block; width: 300px;">
+      <label for="event-hashtag" style="font-family: HelveticaNeue-Bold">EVENT HASHTAG:</label>
+      <input type="text" id="tag" name="hashtag" placeholder="your event hashtag" style="display: block; width: 300px;">
+      <button class="btn" style="margin-top: 10px">Submit</button>
+    </form></center>
 
-              </div>
+           <!--    </div> -->
             </div>
             </li>
        <!--      <li id="slide4">
