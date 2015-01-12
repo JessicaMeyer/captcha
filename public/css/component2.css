@@ -99,7 +99,7 @@ html, body, .container, .main { height: 900px;}
 }
 
 /* Iconfont for navigation and headings */
-.cbp-contentslider [class^="icon-"]:before, 
+.cbp-contentslider [class^="icon-"]:before,
 .cbp-contentslider [class*=" icon-"]:before {
 	font-family: 'icomoon';
 	font-style: normal;
@@ -138,7 +138,7 @@ html, body, .container, .main { height: 900px;}
 	content: "\41";
 }
 
-.cbp-contentslider [class^="icon-"].rc-active:before, 
+.cbp-contentslider [class^="icon-"].rc-active:before,
 .cbp-contentslider [class*=" icon-"].rc-active:before,
 .cbp-contentslider nav a:hover:before {
 	color: rgba(255,255,255,0.9);
@@ -159,7 +159,7 @@ html, body, .container, .main { height: 900px;}
 	border-bottom: 4px solid #47a3da;
 }
 
-.cbp-contentslider h3[class^="icon-"]:before, 
+.cbp-contentslider h3[class^="icon-"]:before,
 .cbp-contentslider h3[class*=" icon-"]:before {
 	top: 0;
 	left: 0;
@@ -193,7 +193,7 @@ html, body, .container, .main { height: 900px;}
 	-moz-column-gap: 1em;
 	-o-column-gap: 1em;
 	column-gap: 1em;
-	vertical-align: top;	
+	vertical-align: top;
 	padding: 1em 0;
 }
 
@@ -203,13 +203,13 @@ html, body, .container, .main { height: 900px;}
 	margin: 0;
 	font-size: 1.2em;
 	font-weight: 300;
-	text-align: justify;
+	text-align: center;
 	line-height: 1.6;
 }
 
 /* Media queries */
 
-@media screen and (max-width: 70em) { 
+@media screen and (max-width: 70em) {
 	.cbp-contentslider p {
 		font-size: 100%;
 	}
@@ -219,7 +219,7 @@ html, body, .container, .main { height: 900px;}
 
 	.cbp-contentslider { font-size: 85%; }
 
-	.cbp-contentslider nav a[class^="icon-"]:before, 
+	.cbp-contentslider nav a[class^="icon-"]:before,
 	.cbp-contentslider nav a[class*=" icon-"]:before {
 		left: 50%;
 		margin-left: -1.250em;
@@ -249,8 +249,8 @@ html, body, .container, .main { height: 900px;}
 
 }
 
-@media screen and (max-width: 25em) { 
+@media screen and (max-width: 25em) {
 	.cbp-contentslider nav a { padding: 0;}
-	.cbp-contentslider h3[class^="icon-"]:before, 
+	.cbp-contentslider h3[class^="icon-"]:before,
 	.cbp-contentslider h3[class*=" icon-"]:before { display: none;}
 }
