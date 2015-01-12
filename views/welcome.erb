@@ -6,67 +6,80 @@
 <div class="container">
 <h1 class="welcomename"> welcome <%= @current_user %>!</h1>
 
+<!--plugin start-->
 
-<!-- Create a new story-->
-
-<div class="test1"></div> <!--these test divs are to center the forms -->
-
-<div class="story-form">
-
- <div class= "row">
-  <div class= "large-6 columns">
-
-      <h6 class="event-title"> create your event story </h6>
-
-    <form action='/welcome' method="post" id="my_form">
+  <div class="container">
+      <header class="clearfix">
+      </header> 
+      <div class="main">
+        <div id="cbp-contentslider" class="cbp-contentslider">
+          <ul>
+            <li id="slide1">
+              <center><h3> # how it works </h3></center>
+              <div>
+                <div class="cbp-content">
+                  <p>Veggies sunt bona vobis, proinde vos postulo esse magis desert raisin bush tomato soko salsify garbanzo horseradish cabbage burdock.</p>
+                  <p>Daikon artichoke gumbo azuki bean bok choy avocado winter purslane gram earthnut pea broccoli salsify squash plantain wattle seed wakame broccoli rabe bamboo shoot. Zucchini lotus root azuki bean epazote dulse pumpkin rutabaga spinach. Endive mung bean gumbo maize plantain rock melon.</p>
+                </div>
+              </div>
+            </li>
+            <li id="slide2">
+              <h3># sample event</h3>
+              <div>
+                <div class="cbp-content">
+                  <center>
+                    #nycmarathon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <img src="images/hashexample1.jpg" class="hashpictures">
+                   #seahawkswin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <img src="images/hashexample2.jpg" class="hashpictures">
+                </center>
+                </div>
+              </div>
+            </li>
+            <li id="slide3">
+              <h3># get started&nbsp;&nbsp;</h3>
+              <div>
+                <div class="cbp-content">
+                   <form action='/welcome' method="post" id="my_form">
       <!-- <input type='text' id='username' name='username' placeholder='Enter Username' /> -->
-      <div>
+      
       <label for="event-title">event title:</label>
       <input id="story-title" type="text" name="title" placeholder="your event title">
-      </div>
       <label for="event-hashtag">event hashtag:</label>
       <input type="text" id="tag" name="hashtag" placeholder="your event hashtag" />
-      <label for="date-of-arrival"> event start date </label>
-      <input type="date" name="date-of-arrival" id="doa" autofocus required>
-      <label for="date-of-departure"> event end date </label>
-      <input type="date" name="date-of-departure" id="dod" autofocus required>
       <button class="btn">Submit</button>
     </form>
-  </div>
- </div>
-</div>
+              
+              </div>
+            </div>
+            </li>
+       <!--      <li id="slide4">
+              <h3 class="icon-turtle">Step 4</h3>
+              <div>
+                <div class="cbp-content">
+                  <p>Yarrow bush tomato beetroot taro water chestnut komatsuna azuki bean. Parsnip artichoke water chestnut caulie carrot grape summer purslane brussels sprout fava bean tomatillo pea groundnut nori earthnut pea tigernut. Tigernut brussels sprout wakame tomatillo radicchio carrot maize swiss chard seakale melon grape broccoli pea sprouts kakadu plum plantain cauliflower. Gram salsify radicchio daikon courgette rock melon bunya nuts turnip greens. Cabbage black-eyed pea spinach asparagus plantain cress soybean spring onion salad artichoke pea garlic silver beet grape water spinach zucchini wakame summer purslane.</p>
+                </div>
+              </div>
+            </li> -->
+           <!--  <li id="slide5">
+              <h3 class="icon-platypus">Platypus</h3>
+              <div>
+                <div class="cbp-content">
+                  <p>Potato watercress burdock spinach quandong jícama chard pea sprouts garlic celery turnip daikon kale lotus root sorrel coriander rock melon cabbage. Epazote salsify lentil rock melon eggplant cauliflower zucchini caulie catsear broccoli rabe pumpkin lettuce okra green bean squash seakale onion water chestnut. Sweet pepper peanut corn soko celery winter purslane.</p>
+                  <p>Daikon artichoke gumbo azuki bean bok choy avocado winter purslane gram earthnut pea broccoli salsify squash plantain wattle seed wakame broccoli rabe bamboo shoot. Zucchini lotus root azuki bean epazote dulse pumpkin rutabaga spinach. Endive mung bean gumbo maize plantain rock melon.</p>
+                </div>
+              </div>
+            </li> -->
+          </ul>
+          <nav>
+            <a href="#slide1"><span>Overview</span></a>
+            <a href="#slide2"><span>Examples</span></a>
+            <a href="#slide3"><span>Get Started</span></a>
+           <!--  <a href="#slide4" class="icon-turtle"><span>Step 4</span></a> -->
+            <!-- <a href="#slide5" class="icon-platypus"><span>Platypus</span></a> -->
+          </nav>
+        </div>
+      </div>
+    </div>
 
-<!--SIGN UP FORM-->
-
-<div class="hashpic">
-
- <div class= "row">
-  <div class= "large-6 columns">
-
-      <h6 class="hashstorypic"> capture your event </h6>
-           <img src="images/hashstory.jpg">
-    
-  </div>
- </div>
-</div>
-
-
-<div class="test2"></div>  <!--these test divs are to center the forms -->
-</div>
-<!--script for form date section-->
-<script>
-// mcc @copyright //
-      $(document).ready(function() {
-        $(document).foundation();
-        $(document).on("submit", "#my_form", function (e) {
-          var startDate = new Date($('#doa').val());
-          var endDate = new Date($('#dod').val());
-           //if end date is before start date
-          if (startDate > endDate){
-              alert("Please enter a later date than the start!");
-              return false;
-            }
-          //if the above conditions fail, the form will be not submitted
-      });
-    })
-    </script>
+    <!--plugin end-->
