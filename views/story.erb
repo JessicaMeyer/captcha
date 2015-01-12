@@ -1,7 +1,27 @@
-<body>
+<div class="logo">
+      <img src="../images/captcha.jpg"></img>
+       <!--sign out button somewhere-->
+       <a href="/signout" method="post" name="signout" action="/signout" class="button radius" id="signoutbutton"> SIGN OUT </a>
+</div>
 
-<%= @title%>
-<br><br>
+<!-- <body> -->
+<!-- <h1 class="titlestory"> <%= @current_user %>'s event: #<%=@title%></h1> -->
+
+<h1 class="titlestory"> <%= @current_user["username"] %>'s event </h1>
+
+<!--bitly URL shortener-->
+
+<center>
+<button type='submit' value='submit' id='shorten' class="tiny button" action="/shorten" method="post">Share event</button>
+</center>
+
+<!-- <div class="row"> -->
+<div class="shortenurl">
+<form action="/shorten" method="post" onclick="showDiv()">
+    <input id="url-input" type="text" name="shortenurl" value="http://bit.ly/1AIAZuO">
+  </div>
+<!-- </div> -->
+</center>
 
 
 <center>
@@ -17,5 +37,5 @@
 <br>
 </center>
 
-</body>
-</html>
+<!-- </body>
+</html> -->
