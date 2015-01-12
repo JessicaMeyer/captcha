@@ -50,6 +50,13 @@ background-color: #b6e2f4;
 	margin-right: 8px;
 }
 
+.signoutbutton {
+	float: right;
+	background: #00457c;
+	margin-right: 4px;
+	margin-top: 16px;
+}
+
 /* recent memories section home page */
 
 .recent-memories {
